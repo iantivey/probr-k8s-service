@@ -1,4 +1,4 @@
-package k8spack
+package kubernetes_pack
 
 import (
 	"github.com/citihub/probr-k8s-service/container_registry_access"
@@ -6,8 +6,8 @@ import (
 	"github.com/citihub/probr-k8s-service/iam"
 	"github.com/citihub/probr-k8s-service/internet_access"
 	"github.com/citihub/probr-k8s-service/pod_security_policy"
-	"github.com/citihub/probr/internal/config"
-	"github.com/citihub/probr/internal/coreengine"
+	"github.com/citihub/probr/config"
+	"github.com/citihub/probr/service_packs/coreengine"
 	"github.com/markbates/pkger"
 )
 

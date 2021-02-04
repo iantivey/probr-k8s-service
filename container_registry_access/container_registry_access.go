@@ -7,10 +7,10 @@ import (
 
 	"github.com/cucumber/godog"
 
-	"github.com/citihub/probr-k8s-service"
-	"github.com/citihub/probr/internal/config"
-	"github.com/citihub/probr/internal/coreengine"
-	"github.com/citihub/probr/internal/utils"
+	kubernetes "github.com/citihub/probr-k8s-service"
+	"github.com/citihub/probr/config"
+	"github.com/citihub/probr/service_packs/coreengine"
+	"github.com/citihub/probr/utils"
 )
 
 type ProbeStruct struct{}

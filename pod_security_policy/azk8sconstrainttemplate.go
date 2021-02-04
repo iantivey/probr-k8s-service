@@ -3,8 +3,8 @@ package pod_security_policy
 import (
 	"log"
 
-	"github.com/citihub/probr-k8s-service"
-	"github.com/citihub/probr/internal/utils"
+	kubernetes "github.com/citihub/probr-k8s-service"
+	"github.com/citihub/probr/utils"
 )
 
 //AzK8sConstraintTemplate captures the Azure specific constraint templates that are the result of applying

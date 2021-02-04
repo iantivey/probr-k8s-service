@@ -1,4 +1,4 @@
-package k8spack
+package kubernetes_pack
 
 var (
 	tags = map[string][]string{

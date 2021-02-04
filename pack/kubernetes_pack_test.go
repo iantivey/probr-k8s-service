@@ -1,10 +1,10 @@
-package k8spack
+package kubernetes_pack
 
 import (
 	"testing"
 
-	"github.com/citihub/probr/internal/config"
-	"github.com/citihub/probr/internal/coreengine"
+	"github.com/citihub/probr/config"
+	"github.com/citihub/probr/service_packs/coreengine"
 )
 
 func TestGetProbes(t *testing.T) {

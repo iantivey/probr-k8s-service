@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/citihub/probr-k8s-service"
-	"github.com/citihub/probr/internal/utils"
+	kubernetes "github.com/citihub/probr-k8s-service"
+	"github.com/citihub/probr/utils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	apiv1 "k8s.io/api/core/v1"

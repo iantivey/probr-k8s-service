@@ -1,23 +1,23 @@
 package general
 
 import (
-	"github.com/citihub/probr-k8s-service"
-	"github.com/citihub/probr/internal/coreengine"
-	"github.com/citihub/probr/internal/summary"
+	kubernetes "github.com/citihub/probr-k8s-service"
+	"github.com/citihub/probr/audit"
+	"github.com/citihub/probr/service_packs/coreengine"
 	"github.com/cucumber/godog"
 )
 
 type scenarioState struct {
 	name          string
-	audit         *summary.ScenarioAudit
-	probe         *summary.Probe
+	audit         *audit.ScenarioAudit
+	probe         *audit.Probe
 	podState      kubernetes.PodState
 	wildcardRoles interface{}
 }
 
 func beforeScenario(s *scenarioState, probeName string, gs *godog.Scenario) {
 	s.name = gs.Name
-	s.probe = summary.State.GetProbeLog(probeName)
-	s.audit = summary.State.GetProbeLog(probeName).InitializeAuditor(gs.Name, gs.Tags)
+	s.probe = audit.State.GetProbeLog(probeName)
+	s.audit = audit.State.GetProbeLog(probeName).InitializeAuditor(gs.Name, gs.Tags)
 	coreengine.LogScenarioStart(gs)
 }
