@@ -4,6 +4,8 @@ package general
 
 import (
 	"fmt"
+	"go/build"
+	"os"
 	"strings"
 
 	rbacv1 "k8s.io/api/rbac/v1"
@@ -192,7 +194,11 @@ func (p ProbeStruct) Name() string {
 }
 
 func (p ProbeStruct) Path() string {
-	return coreengine.GetFeaturePath(p.Name())
+	gopath := os.Getenv("GOPATH")
+	if gopath == "" {
+		gopath = build.Default.GOPATH
+	}
+	return coreengine.GetFeaturePath(gopath, "probr-k8s-service", p.Name())
 }
 
 // genProbeInitialize handles any overall Test Suite initialisation steps.  This is registered with the

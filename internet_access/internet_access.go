@@ -2,7 +2,9 @@ package internet_access
 
 import (
 	"fmt"
+	"go/build"
 	"log"
+	"os"
 
 	"github.com/cucumber/godog"
 	apiv1 "k8s.io/api/core/v1"
@@ -127,7 +129,11 @@ func (p ProbeStruct) Name() string {
 }
 
 func (p ProbeStruct) Path() string {
-	return coreengine.GetFeaturePath(p.Name())
+	gopath := os.Getenv("GOPATH")
+	if gopath == "" {
+		gopath = build.Default.GOPATH
+	}
+	return coreengine.GetFeaturePath(gopath, "probr-k8s-service", p.Name())
 }
 
 // iaProbeInitialize handles any overall Test Suite initialisation steps.  This is registered with the
