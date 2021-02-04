@@ -150,7 +150,7 @@ func (p ProbeStruct) Name() string {
 }
 
 func (p ProbeStruct) Path() string {
-	return coreengine.GetFeaturePath("service_packs", "kubernetes", p.Name())
+	return coreengine.GetFeaturePath(p.Name())
 }
 
 // ProbeInitialize handles any overall Test Suite initialisation steps.  This is registered with the
