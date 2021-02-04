@@ -7,11 +7,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/citihub/probr-k8s-service"
 	"github.com/citihub/probr/internal/config"
 	"github.com/citihub/probr/internal/coreengine"
 	"github.com/citihub/probr/internal/summary"
 	"github.com/citihub/probr/internal/utils"
-	"github.com/citihub/probr/service_packs/kubernetes"
 	"github.com/cucumber/godog"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 

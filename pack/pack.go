@@ -1,13 +1,13 @@
 package k8spack
 
 import (
+	"github.com/citihub/probr-k8s-service/container_registry_access"
+	"github.com/citihub/probr-k8s-service/general"
+	"github.com/citihub/probr-k8s-service/iam"
+	"github.com/citihub/probr-k8s-service/internet_access"
+	"github.com/citihub/probr-k8s-service/pod_security_policy"
 	"github.com/citihub/probr/internal/config"
 	"github.com/citihub/probr/internal/coreengine"
-	"github.com/citihub/probr/service_packs/kubernetes/container_registry_access"
-	"github.com/citihub/probr/service_packs/kubernetes/general"
-	"github.com/citihub/probr/service_packs/kubernetes/iam"
-	"github.com/citihub/probr/service_packs/kubernetes/internet_access"
-	"github.com/citihub/probr/service_packs/kubernetes/pod_security_policy"
 	"github.com/markbates/pkger"
 )
 

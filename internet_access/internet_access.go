@@ -7,9 +7,9 @@ import (
 	"github.com/cucumber/godog"
 	apiv1 "k8s.io/api/core/v1"
 
+	"github.com/citihub/probr-k8s-service"
 	"github.com/citihub/probr/internal/coreengine"
 	"github.com/citihub/probr/internal/utils"
-	"github.com/citihub/probr/service_packs/kubernetes"
 )
 
 type ProbeStruct struct{}
